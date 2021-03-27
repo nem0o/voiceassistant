@@ -141,13 +141,6 @@ def hello(*args,tuple):
     ]
     play_voice_assistant_speech(hello[random.randint(0, len(hello) - 1)])
 
-def silence(*args, tuple):
-    silence = [
-        translator.get("I can't hear anything")
-    ]
-    play_voice_assistant_speech(silence)
-
-
 def execute_command_with_name(command_name: str, *args: list):
     for key in commands.keys():
         if command_name in key:
@@ -184,10 +177,7 @@ if __name__ == "__main__":
         os.remove("microphone-results.wav")
         print(voice_input)
 
-        a = voice_input.split(" ")
-        try:
-            command = voice_input[0]
-        except IndexError:
-            execute_command_with_name(silence)
+        a = voice_input.split(" ")     
+        command = voice_input[0]
         command_option = [str(input_part) for input_part in a[1:len(a)]]
         execute_command_with_name(command, command_option)
