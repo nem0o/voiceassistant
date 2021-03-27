@@ -59,9 +59,6 @@ def setup_asssistant_voice():
 
 
 def record_and_recognize_audio(*args: tuple):
-    """
-    Запись и распознавание аудио
-    """
     with microphone:
         recognized_data = ""
 
@@ -133,17 +130,11 @@ def use_offline_recognition():
 
 
 def play_voice_assistant_speech(text_to_speach):
-    '''
-    Проигрывание ответов
-    '''
     engine.say(str(text_to_speach))
     engine.runAndWait()
 
 
 def hello(*args,tuple):
-    """
-    типо привет
-    """
     hello = [
         translator.get("Hello, {}, How can I help you today?").format(person.name),
         translator.get("Good day to you {}! How can I help you?").format(person.name)
