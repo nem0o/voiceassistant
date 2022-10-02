@@ -93,8 +93,7 @@ def record_and_recognize_audio(*args: tuple):
         return recognized_data
 
 
-'''
-В разработке 
+
 def use_offline_recognition():
     """
     Переключение на оффлайн-распознавание речи
@@ -126,7 +125,7 @@ def use_offline_recognition():
         print("Sorry, speech service is unavailable. Try again later")
 
     return recognized_data
-'''
+
 
 
 def play_voice_assistant_speech(text_to_speach):
